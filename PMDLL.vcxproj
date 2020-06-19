@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0D4E16F2-53BB-4BB0-8362-88381EDD4911}</ProjectGuid>
+    <RootNamespace>PMDLL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libPMDLL</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ExcludePath>
+    </ExcludePath>
+    <IncludePath>C:\Users\Administrator\Desktop\PUBLISHING\FLOWERS\_SteamSDK\public;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Administrator\Desktop\PUBLISHING\FLOWERS\FlowerDesign\PMDLL Achievement\PMDLL\PMDLL\steam;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>E:\PUBLISHING\FLOWERS\_SteamSDK\public;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>E:\PUBLISHING\FLOWERS\_SteamSDK\redistributable_bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lua-5.3.5\lapi.h" />
+    <ClInclude Include="..\lua-5.3.5\lauxlib.h" />
+    <ClInclude Include="..\lua-5.3.5\lcode.h" />
+    <ClInclude Include="..\lua-5.3.5\lctype.h" />
+    <ClInclude Include="..\lua-5.3.5\ldebug.h" />
+    <ClInclude Include="..\lua-5.3.5\ldo.h" />
+    <ClInclude Include="..\lua-5.3.5\lfunc.h" />
+    <ClInclude Include="..\lua-5.3.5\lgc.h" />
+    <ClInclude Include="..\lua-5.3.5\llex.h" />
+    <ClInclude Include="..\lua-5.3.5\llimits.h" />
+    <ClInclude Include="..\lua-5.3.5\lmem.h" />
+    <ClInclude Include="..\lua-5.3.5\lobject.h" />
+    <ClInclude Include="..\lua-5.3.5\lopcodes.h" />
+    <ClInclude Include="..\lua-5.3.5\lparser.h" />
+    <ClInclude Include="..\lua-5.3.5\lprefix.h" />
+    <ClInclude Include="..\lua-5.3.5\lstate.h" />
+    <ClInclude Include="..\lua-5.3.5\lstring.h" />
+    <ClInclude Include="..\lua-5.3.5\ltable.h" />
+    <ClInclude Include="..\lua-5.3.5\ltm.h" />
+    <ClInclude Include="..\lua-5.3.5\lua.h" />
+    <ClInclude Include="..\lua-5.3.5\lua.hpp" />
+    <ClInclude Include="..\lua-5.3.5\luaconf.h" />
+    <ClInclude Include="..\lua-5.3.5\lualib.h" />
+    <ClInclude Include="..\lua-5.3.5\lundump.h" />
+    <ClInclude Include="..\lua-5.3.5\lvm.h" />
+    <ClInclude Include="..\lua-5.3.5\lzio.h" />
+    <ClInclude Include="etart.h" />
+    <ClInclude Include="logic.h" />
+    <ClInclude Include="shape.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lua-5.3.5\lapi.c" />
+    <ClCompile Include="..\lua-5.3.5\lauxlib.c" />
+    <ClCompile Include="..\lua-5.3.5\lbaselib.c" />
+    <ClCompile Include="..\lua-5.3.5\lbitlib.c" />
+    <ClCompile Include="..\lua-5.3.5\lcode.c" />
+    <ClCompile Include="..\lua-5.3.5\lcorolib.c" />
+    <ClCompile Include="..\lua-5.3.5\lctype.c" />
+    <ClCompile Include="..\lua-5.3.5\ldblib.c" />
+    <ClCompile Include="..\lua-5.3.5\ldebug.c" />
+    <ClCompile Include="..\lua-5.3.5\ldo.c" />
+    <ClCompile Include="..\lua-5.3.5\ldump.c" />
+    <ClCompile Include="..\lua-5.3.5\lfunc.c" />
+    <ClCompile Include="..\lua-5.3.5\lgc.c" />
+    <ClCompile Include="..\lua-5.3.5\linit.c" />
+    <ClCompile Include="..\lua-5.3.5\liolib.c" />
+    <ClCompile Include="..\lua-5.3.5\llex.c" />
+    <ClCompile Include="..\lua-5.3.5\lmathlib.c" />
+    <ClCompile Include="..\lua-5.3.5\lmem.c" />
+    <ClCompile Include="..\lua-5.3.5\loadlib.c" />
+    <ClCompile Include="..\lua-5.3.5\lobject.c" />
+    <ClCompile Include="..\lua-5.3.5\lopcodes.c" />
+    <ClCompile Include="..\lua-5.3.5\loslib.c" />
+    <ClCompile Include="..\lua-5.3.5\lparser.c" />
+    <ClCompile Include="..\lua-5.3.5\lstate.c" />
+    <ClCompile Include="..\lua-5.3.5\lstring.c" />
+    <ClCompile Include="..\lua-5.3.5\lstrlib.c" />
+    <ClCompile Include="..\lua-5.3.5\ltable.c" />
+    <ClCompile Include="..\lua-5.3.5\ltablib.c" />
+    <ClCompile Include="..\lua-5.3.5\ltm.c" />
+    <ClCompile Include="..\lua-5.3.5\luac.c" />
+    <ClCompile Include="..\lua-5.3.5\lundump.c" />
+    <ClCompile Include="..\lua-5.3.5\lutf8lib.c" />
+    <ClCompile Include="..\lua-5.3.5\lvm.c" />
+    <ClCompile Include="..\lua-5.3.5\lzio.c" />
+    <ClCompile Include="main.cpp" />
+    <ClInclude Include="com.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
